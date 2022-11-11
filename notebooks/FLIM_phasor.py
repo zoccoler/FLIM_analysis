@@ -51,6 +51,8 @@ def make_synthetic_flim_data(time_array, amplitude_list, tau_list):
 def get_phasor_components(flim_data, harmonic=1):
     '''
     Calculate phasor components G and S from the fourier transform
+    
+    The index of the Fourier transform corresponds to the harmonic
     '''
     import numpy as np
     flim_data_fft = np.fft.fft(flim_data, axis=0)
@@ -62,7 +64,7 @@ def get_phasor_components(flim_data, harmonic=1):
     g = g / dc
     s = abs(flim_data_fft[harmonic].imag)
     s /= dc
-    return g, s, dc
+    return g, s
 
 
 def add_phasor_circle(ax):
