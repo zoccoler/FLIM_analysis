@@ -1,5 +1,3 @@
-
-notebooks/.ipynb_checkpoints/Open_PTU_files-checkpoint.ipynb
-notebooks/.ipynb_checkpoints/readPTU_FLIM-checkpoint.py
-notebooks/__pycache__/readPTU_FLIM.cpython-39.pyc
-notebooks/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+.ipynb_checkpoints
+*.pyc
+*/.ipynb_checkpoints/*
