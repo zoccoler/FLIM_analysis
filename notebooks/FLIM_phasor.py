@@ -91,7 +91,7 @@ def add_tau_lines(ax, tau_list, frequency):
         tau = tau * 1E-9  # nanoseconds to seconds
         g = 1 / (1 + ((w * tau)**2))
         s = (w * tau) / (1 + ((w * tau)**2))
-        dot, = ax.plot(g, s, marker='o', mfc='none')
+        dot, = ax.plot(g, s, marker='o', mfc='none', ms=12)
         array = np.linspace(0, g, 50)
         y = (array * s / g)
         ax.plot(array, y, color=dot.get_color())
